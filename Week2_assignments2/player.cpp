@@ -1,5 +1,8 @@
 #include "Player.h"
 #include<iostream>
+Player::Player(string nickname) : nickname(nickname)
+{
+}
 void Player::printPlayerStatus()
 {
     cout << "------------------------------------" << endl;
