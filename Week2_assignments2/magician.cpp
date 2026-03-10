@@ -12,7 +12,7 @@ void Magician::attack()
 
 void Magician::attack(Monster* monster) 
 {
-	cout << "마법 공격을 합니다!" << std::endl;
+	cout << "플레이어가 마법 공격을 합니다!" << std::endl;
 	int damage = 0;
 	damage = this->atk - monster->getdef();
 

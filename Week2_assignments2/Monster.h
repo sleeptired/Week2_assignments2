@@ -13,8 +13,9 @@ public:
     int getHp();
     int getdef();
     int getatk();
+    string getname();
     void setHP(int HP);
-
+    void setStatus();
 
 protected:
     string name = "";

@@ -11,7 +11,7 @@ void Warrior::attack()
 
 void Warrior::attack(Monster* monster)
 {
-	cout << "°ËÀ» ÈÖµÎ¸¨´Ï´Ù!" << std::endl;
+	cout << "ÇÃ·¹ÀÌ¾î°¡ °ËÀ» ÈÖµÎ¸¨´Ï´Ù!" << std::endl;
 	int damage = 0;
 	damage = this->atk - monster->getdef();
 

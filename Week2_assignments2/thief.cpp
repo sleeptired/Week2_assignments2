@@ -12,7 +12,7 @@ void Thief::attack()
 
 void Thief::attack(Monster* monster) 
 {
-	cout << "´Ü°ËÀ¸·Î Âî¸¨´Ï´Ù!" << std::endl;
+	cout << "ÇÃ·¹ÀÌ¾î°¡ ´Ü°ËÀ¸·Î Âî¸¨´Ï´Ù!" << std::endl;
 	int damage = 0;
 	damage = this->atk - monster->getdef();
 

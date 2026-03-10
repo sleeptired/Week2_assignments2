@@ -59,13 +59,17 @@ int main() {
     }
 
     player->attack();
-    cout << "필수과제 구현 파트였습니다." << endl;
+    cout << "**필수과제 구현 파트였습니다.**" << endl;
+    Monster* monster = nullptr;
+    monster = new Monster();
+    
+    //플레이어 값 입력부분
+    player->setStatus();
+    monster->setStatus();
 
 
     player->printPlayerStatus();
     cout << "Monster가 등장했습니다!!" << endl;
-    Monster* monster = nullptr;
-    monster = new Monster();
     UIsystem();
     while (GameLoop)
     {
@@ -73,23 +77,21 @@ int main() {
         std::cin >> input_num;
         if (input_num == 1)
         {
-            std::cout << "[플레이어의 턴]" << std::endl;
             player->attack(monster);
             if (monster->getHp() <= 0)
             {
-                std::cout << "축하합니다! 전투에서 승리하셨습니다!" << std::endl;
+                std::cout << "축하합니다!! 전투에서 승리하셨습니다!!" << std::endl;
                 break; // 전투 종료
             }
-            std::cout << "몬스터 남은 HP: " << monster->getHp() << std::endl;
+            std::cout << "[몬스터] " << monster->getname() << " 남은 HP: " << monster->getHp() << std::endl;
 
-            std::cout << "[몬스터의 턴]" << std::endl;
             monster->attack(player);
             if (player->getHP() <= 0)
             {
                 std::cout << "플레이어가 쓰러졌습니다... 게임 오버." << std::endl;
                 break; // 전투 종료
             }
-            std::cout << "플레이어 남은 HP: " << player->getHP() << std::endl;
+            std::cout << "[플레이어] " << player->getnickname() << " 남은 HP: " << player->getHP() << std::endl;
         }
         else if (input_num == 0)
         {
@@ -101,7 +103,7 @@ int main() {
             cout << "잘못된 입력입니다." << endl;
         }
     }
-    cout << "도전과제 구현 파트였습니다." << endl;
+    cout << "**도전과제 구현 파트였습니다.**" << endl;
     if (player != nullptr)
         delete player;
     if (monster != nullptr)

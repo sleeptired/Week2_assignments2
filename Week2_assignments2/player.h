@@ -17,9 +17,11 @@ public:
     int getHP();
     int getAtk();
     int getDef();
+    string getnickname();
 
     // setter ÇÔ¼ö
     void setHP(int HP);
+    void setStatus();
 
 protected:
     string nickname;
