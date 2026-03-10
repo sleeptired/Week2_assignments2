@@ -7,6 +7,7 @@ public:
 	Magician(string nickname);
 	~Magician();
 	void attack();
+	void attack(Monster* monster);
 private:
 
 };

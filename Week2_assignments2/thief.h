@@ -7,7 +7,7 @@ public:
 	Thief(string nickname);
 	~Thief();
 	void attack();
-
+	void attack(Monster* monster);
 private:
 
 };

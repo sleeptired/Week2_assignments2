@@ -7,7 +7,7 @@ public:
 	Archer(string nickname);
 	~Archer();
 	void attack();
-
+	void attack(Monster* monster);
 private:
 
 };
